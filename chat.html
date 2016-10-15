@@ -90,7 +90,7 @@ if ('serviceWorker' in navigator) {
 
   
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -107,9 +107,9 @@ if ('serviceWorker' in navigator) {
       </div>
     </nav>
 
-     <div class="container-fluid">
+     <div class="container">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div class="col-sm-3 col-md-2 sidebar" style="overflow-y:hidden;">
           <ul class="nav nav-sidebar">
             <div class="imageIcons">
               <a href="chat.html">
@@ -207,6 +207,7 @@ if ('serviceWorker' in navigator) {
 			</div>
 		</div>
 	  </div><!--/row-->
+    </div>
 
 
 <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
