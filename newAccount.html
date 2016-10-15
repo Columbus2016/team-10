@@ -62,13 +62,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:#ffffff; font: PT Sans;">Support Network</a>
+          <b><a class="navbar-brand" href="#" style="color:#ffffff; font: PT Sans;">Pink Movement</a></b>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            
-          </form>
-        </div>
+        
+          <div class="navbar-form navbar-right">
+            <a href="UserProfile.html"  style="color:#ffffff;"><i class="fa fa-cog"></i></a>
+          </div>
       </div>
     </nav>
 	
@@ -89,26 +88,30 @@
 				<label><input type = "radio", name = "Type", value = "patient">patient with Metastatic Disease</label>  
 
 				<div>
-					<form action="action_page.php">
+					<form action="action_page.php" style="text-align: left">
 
 						<label for="fname">First Name</label>
-						<input type="text" id="fname" name="firstname">
+						<input type="text" id="fname" name="firstname" class="textBox">
+						<div></div>
 
 						<label for="lname">Last Name</label>		
-						<input type="text" id="lname" name="lastname">
+						<input type="text" id="lname" name="lastname" class="textBox">
+						<div></div>
 
-						<label for="uname">Username</label>
-						<input type="text" id="uname" name="username">
+						<label for="uname">Username*</label>
+						<input type="text" id="uname" name="username" class="textBox">
+						<div></div>
 
-						<label for="pword">Password</label>
-						<input type="text" id="pword" name="password">
+						<label for="pword">Password*</label>
+						<input type="text" id="pword" name="password" class="textBox">
+						<div></div>
 
 						<label for="cpword">Confirm password</label>
-						<input type="text" id="cpword" name="confirm password">
+						<input type="text" id="cpword" name="confirm password" class="textBox">
+						<div></div>
 
-						<label for="age">Age</label>
-						<select id="age" name="age">
-					
+						<label for="age">Age*</label>
+						<select id="age" name="age" class="textBox">					
 							<option value=""></option>
 							<option value="20 - 34">20 - 34</option>
 							<option value="35 - 44">35 - 44</option>
@@ -118,10 +121,10 @@
 							<option value="75 - 84">75 - 84</option>
 							<option value="85+ ">85+ </option>
 						</select>
+						<div></div>
       
 						<label for="race">Race</label>
-						<select id="race" name="race">
-
+						<select id="race" name="race" class="textBox">
 							<option value=""></option>
 							<option value="Black">Black/African American</option>
 							<option value="White">White</option>
@@ -129,16 +132,29 @@
 							<option value="American Indian/Alaska native">American Indian/Alaska native</option>
 							<option value="Native Hawaiian/Other Pacific Islander">Native Hawaiian/Other Pacific Islander</option>
 						</select>  
+						<div></div>
       
 						<label for="ethnicity">Ethnicity</label>
-						<select id="ethnicity" name="ethnicity">
+						<select id="ethnicity" name="ethnicity" class="textBox">
 							<option value=""></option>
 							<option value="hispanic_latino">Hispanic or Latino</option>
 							<option value="nhispanic_latino">Not Hispanic or Latino</option>
 							<option value="optional">I do not wish to share this information.</option>
 						</select> 
+						
+						<div></div>
+						
+						<label for="tCancer">Type of Cancer</label>
+						<input type="text" id="tCancer" name="tCancer" class="textBox">
+						<div></div>
+						
+						<label for="tCancer">Stage of Cancer</label>
+						<input type="text" id="tCancer" name="tCancer" class="textBox">
+						<div></div>
+						
+						<div></div>
       
-						<p>Would you like to opt into the Susan G. Koman data research?</p>      
+						<p>Would you like to opt into the Susan G. Koman data research?</p>					
 						<label><input type = "radio", name = "Type", value = "opt_in">opt in</label>  
 						<label><input type = "radio", name = "Type", value = "opt_in">opt out</label>    
 					</form>
@@ -150,7 +166,6 @@
       </div><!--/row-->
       <hr>
 	<footer>
-		<p>&copy; Company 2013</p>
 	</footer>
 
     <!-- Le javascript
