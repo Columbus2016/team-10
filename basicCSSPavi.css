@@ -13,12 +13,6 @@
 }
 
 
-
-
-. {
-	font-family: PT Sans;
-}
-
 div.pagetop{
 			background-color: teal;
 			color :white;
@@ -174,6 +168,12 @@ a{
   border-right:solid;
   border-bottom:solid;
 }
+
+.menuIcons{
+  font-size:20px;
+  font-color:white;
+}
+
 .buttonclr{
   color: teal;
 }
@@ -215,6 +215,7 @@ a{
 .wrapper {
     float: left;
 }
+
 /* Featurettes
 ------------------------- */
 
@@ -222,6 +223,7 @@ a{
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
 
+/* RESPONSIVE CSS-------- */
 
 
 #ChatPerson {
@@ -254,8 +256,4 @@ a{
   font-family: Arial;
   font-size: 40px;
   color:#f238a6;
-}
-
-.textBox {
-	margin-left: 3%;
 }
