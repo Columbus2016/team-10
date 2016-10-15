@@ -12,29 +12,6 @@
 	margin-bottom: 20px;
 }
 
-#famchildren { background-image: url("greyzz.png");} 
-
-#freespeech { background-image: url("greyzz.png");} 
-
-#healthmed {background-image: url("greyzz.png");}
-
-#immigration { background-image: url("greyzz.png");} 
-
-#lgbtqa { background-image: url("greyzz.png");} 
-
-#photovideo { background-image: url("greyzz.png");} 
-
-#privacy { background-image: url("greyzz.png");} 
-
-#searchwarrent { background-image: url("greyzz.png");} 
-
-#socialdiscrim { background-image: url("greyzz.png");} 
-
-#stoparrests { background-image: url("greyzz.png");} 
-
-#womens { background-image: url("greyzz.png");} 
-
-#worklabor { background-image: url("greyzz.png");} 
 
 
 
@@ -82,6 +59,9 @@ p.top{
 	display: inline;
 }
 
+.wrapper {
+    float: left;
+}
 /*!
  * This is code for the gallery div
  */
@@ -191,6 +171,8 @@ a{
   font-size:150px;
   color:#f238a6;
   text-align: center;
+  border-right:solid;
+  border-bottom:solid;
 }
 .buttonclr{
   color: teal;
@@ -223,6 +205,13 @@ a{
   font:Arial;
   font-size:25px;
 }
+
+.groupsText{
+  color:color:#000000;
+  margin-top:30px;
+  font-size:50px;
+}
+
 /* Featurettes
 ------------------------- */
 
@@ -312,4 +301,10 @@ a{
 	font-family: Arial;
 	font-size: 40px;
 	color:#f238a6;
+}
+
+.groupIcons{
+  font-family: Arial;
+  font-size: 40px;
+  color:#f238a6;
 }

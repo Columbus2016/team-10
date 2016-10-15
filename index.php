@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
     <title>Bootstrap, from Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,27 +55,29 @@
                     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
   
-   <script type="text/javascript">
-      var START_DATE = new Date("October 15, 2016 01:55:00"); // put in the starting date here
-    var INTERVAL = 1; // refresh interval in seconds
-    var INCREMENT = 2;  // increase per tick (1/0.0013 ~ 769.2)
-    var START_VALUE = 31694902; // initial value when it's the start date
-    var count = 0;
-    $(document).ready(function() {
-     var msInterval = INTERVAL * 1000;
-     var now = new Date();
-     count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
-     $('#counter').html(count.toFixed(0));
-     window.setInterval( function(){
-        count += INCREMENT; 
-        $('#counter').html(count.toFixed(0));
-     }, msInterval);
-    });
-    </script>
+  
+
+   
   </head>
 
   <body>
+  <script type="text/javascript">
+    
+if ('serviceWorker' in navigator) {
+  console.log('Service Worker is supported');
+  navigator.serviceWorker.register('sw.js').then(function() {
+    return navigator.serviceWorker.ready;
+  }).then(function(reg) {
+    console.log('Service Worker is ready :^)', reg);
+      // TODO
+  }).catch(function(error) {
+    console.log('Service Worker error :^(', error);
+  });
+}
 
+  </script>
+
+  
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -89,9 +90,6 @@
           <a class="navbar-brand" href="#" style="color:#ffffff; font: PT Sans;">Support Network</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </nav>
@@ -124,49 +122,57 @@
         </div>
 
 
-        <div class="col-xs-10">
-          <h1 class="bigText">
-          As a community, we've raised this much money in 2016 alone.
-          </h1>
-          <div class="counter" id="counter" style="font: Verdana;"></div>
-          <h1 class="bigText">
-          With your help, we can raise even more to help more people.
-          </h1>
-          <h1 class="biggerText"> Donate today.</h1>
-            <!--Donate Button-->
-          <div style="text-align: center; margin-top:40px">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick" />
-            <input type="hidden" name="hosted_button_id" value="9D7DVS6K8KQCJ" />
-            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate" />
-            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-            </form>
-          </div>
-          <div class="row-fluid">  
-          </div><!--/row-->
+        <div class="col-xs-7">
+    
+          <div class="row">
+            <div class="span4">
+             <div class="form-group">
         </div><!--/span-->
-      </div><!--/row-->
-
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-
-    </div><!--/.fluid-container-->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <div class="container">
+   <div class="row">
+        <div class="col-md-6">
+         <h2>Custom search field</h2>
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" name='var' class="form-control input-lg" placeholder="State"/>
+                    <input type="button" name="test" id="test" value="Submit" /><br/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
       
-      <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+     </head>
+<body>
+<?php
+   class MyDB extends SQLite3
+   {
+      function __construct()
+      {
+         $this->open('u.db');
+      }
+   }
+   $db = new MyDB();
+   if(!$db){
+      echo $db->lastErrorMsg();
+   } 
+   $sql =<<<EOF
+      SELECT firstname from users WHERE state = 'OH'
+EOF;
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-  </body>
+   $ret = $db->query($sql);
+   while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+      echo "FIRSTNAME = ". $row['firstname'] . "\n";
+      echo "LASTNAME = ". $row['lastname'] ."\n";
+      echo "TYPE = ". $row['type'] ."\n";
+      echo "STAGE =  ".$row['stage'] ."\n\n";
+   }
+   $db->close();
+?>
+</body>
 </html>
