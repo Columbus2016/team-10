@@ -1,11 +1,7 @@
 #home { 
-    background-image: url("greyzz.png");
-	
+   
 }
-#contactus { 
-    background-image: url("greyzz.png");
-	
-}
+
 
 #content {
 	margin-top: 70px;
@@ -202,7 +198,7 @@ a{
 
 .mainTitle{
   color:#ffffff; 
-  font:Arial;
+  font:PT Sans;
   font-size:25px;
 }
 
