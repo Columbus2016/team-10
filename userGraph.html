@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Donate</title>
+    <title>User Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -52,31 +52,17 @@
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
-  
-   <script type="text/javascript">
-      var START_DATE = new Date("October 15, 2016 01:55:00"); // put in the starting date here
-    var INTERVAL = 1; // refresh interval in seconds
-    var INCREMENT = 2;  // increase per tick (1/0.0013 ~ 769.2)
-    var START_VALUE = 31694902; // initial value when it's the start date
-    var count = 0;
-    $(document).ready(function() {
-     var msInterval = INTERVAL * 1000;
-     var now = new Date();
-     count = parseInt((now - START_DATE)/msInterval) * INCREMENT + START_VALUE;
-     $('#counter').html(count.toFixed(0));
-     window.setInterval( function(){
-        count += INCREMENT; 
-        $('#counter').html(count.toFixed(0));
-     }, msInterval);
-    });
-    </script>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+    <!--start thing-->
+
+    <link rel="stylesheet" href="http://cdn.graphalchemist.com/alchemy.min.css"/>
+    <!--end thing-->
   </head>
 
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -86,18 +72,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <b><a class="navbar-brand" href="#" style="color:#ffffff; font: PT Sans;">Pink Movement</a></b>
+         <b><a class="navbar-brand" href="#" style="color:#ffffff; font: PT Sans;">Pink Movement</a></b>
+        </div>
+        <div class="navbar-form navbar-right">
+			 <a href="UserProfile.html" style="color:#ffffff;"><i class="fa fa-cog"></i></a>
         </div>
         
-          <div class="navbar-form navbar-right">
-            <a href="UserProfile.html"  style="color:#ffffff;"><i class="fa fa-cog"></i></a>
-          </div>
       </div>
     </nav>
 
-     <div class="container">
+    <div class="container-fluid">
       <div class="row">
-               <div class="col-sm-3 col-md-2 sidebar" style="overflow-y:hidden;">
+        <div class="col-sm-3 col-md-2 sidebar" style="overflow-y:hidden;">
           <ul class="nav nav-sidebar">
             <div class="imageIcons">
               <a href="chat.html">
@@ -122,49 +108,34 @@
           </ul>
         </div>
 
+        <div class="col-xs-10 col-xs-offset-2">
+		        <div class="alchemy" id="alchemy"></div>
 
-
-        <div class="col-xs-10">
-          <h1 class="bigText">
-          As a community, we've raised this much money in 2016 alone.
-          </h1>
-          <div class="counter" id="counter" style="font: Verdana;"></div>
-          <h1 class="bigText">
-          With your help, we can continue to fight for a cure and save the lives of those who are suffering from breast cancer.
-          </h1>
-          <h1 class="biggerText"> Donate today.</h1>
-            <!--Donate Button-->
-          <div style="text-align: center; margin-top:40px">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick" />
-            <input type="hidden" name="hosted_button_id" value="9D7DVS6K8KQCJ" />
-            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate" />
-            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-            </form>
-          </div>
-          <div class="row-fluid">  
-          </div><!--/row-->
-        </div><!--/span-->
-      </div><!--/row-->
-
-
-      <a href="dashboard.html">Dashboard</a>
-
-      <hr>
-
-    </div><!--/.fluid-container-->
+              <script src="http://cdn.graphalchemist.com/alchemy.min.js"></script>
+              <script type="text/javascript">
+                alchemy.begin({
+                      dataSource: "data.json", 
+                      nodeCaption: 'name', 
+                      nodeMouseOver: 'name',
+                        cluster: true,
+                        clusterColours: ["#1B9E77","#D95F02","#7570B3","#E7298A","#66A61E","#E6AB02"]})
+              </script>
+        </div>
+      </div><!--/span-->
+    </div><!--/row-->
+    
+	<hr>
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
       
-      <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- jQuery -->
+	<script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
   </body>
 </html>
