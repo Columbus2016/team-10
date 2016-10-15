@@ -8,8 +8,9 @@
 	margin-bottom: 20px;
 }
 
-
-
+body {
+  font-family: PT Sans;
+}
 
 . {
 	font-family: PT Sans;
