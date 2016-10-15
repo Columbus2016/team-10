@@ -36,6 +36,12 @@
 
 #worklabor { background-image: url("greyzz.png");} 
 
+
+
+. {
+	font-family: PT Sans;
+}
+
 div.pagetop{
 			background-color: teal;
 			color :white;
