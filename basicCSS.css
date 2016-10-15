@@ -252,6 +252,12 @@ a{
   color:#f238a6;
 }
 
+.profileIcons{
+  font-family: Arial;
+  font-size: 80px;
+  color:#f238a6;
+}
+
 .textBox {
 	margin-left: 3%;
 }
