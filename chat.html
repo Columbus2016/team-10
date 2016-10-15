@@ -5,7 +5,7 @@
     <title>Bootstrap, from Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="basicCSS.css">
 
     <!-- jQuery library -->
@@ -17,11 +17,12 @@
     <meta name="author" content="">
 
 
-<!-- Fonts -->
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-  <script src="https://use.fontawesome.com/7778150638.js"></script>
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	
+	<script src="https://use.fontawesome.com/7778150638.js"></script>
 
     <!-- Le styles -->
     <style type="text/css">
@@ -52,6 +53,11 @@
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+<<<<<<< HEAD
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+=======
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
@@ -69,24 +75,24 @@
   
 
 	
+>>>>>>> 8b58455db09462d677b27c5ce2c2630647bfe906
   </head>
 
   <body>
-  <script type="text/javascript">
-    
-if ('serviceWorker' in navigator) {
-  console.log('Service Worker is supported');
-  navigator.serviceWorker.register('sw.js').then(function() {
-    return navigator.serviceWorker.ready;
-  }).then(function(reg) {
-    console.log('Service Worker is ready :^)', reg);
-      // TODO
-  }).catch(function(error) {
-    console.log('Service Worker error :^(', error);
-  });
-}
+	<script type="text/javascript">
+		if ('serviceWorker' in navigator) {
+			console.log('Service Worker is supported');
+			navigator.serviceWorker.register('sw.js').then(function() {
+				return navigator.serviceWorker.ready;
+			}).then(function(reg) {
+				console.log('Service Worker is ready :^)', reg);
+			// TODO
+			}).catch(function(error) {
+				console.log('Service Worker error :^(', error);
+			});
+			}
 
-  </script>
+	</script>
 
   
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -136,25 +142,24 @@ if ('serviceWorker' in navigator) {
 
 
         <div class="col-xs-7">
-    
-          <div class="row">
-            <div class="span4">
-             <div class="form-group">
-				<h1 id="ChatPerson">Jenna</h1>
-				<textarea class="form-control" rows="20" id="comment">  </textarea>
-			</div>
-            </div><!--/span-->
-            <div class="span4">
-              <div class="col-lg-9" style="float: right">
-				<div class="input-group" >
-					<input type="text" class="form-control" placeholder="Enter message..." id="text">
-					<span class="input-group-btn" ">
-						<button class="btn btn-default" type="button" id="sendTxt">Send</button>
-					</span>
-				</div><!-- /input-group -->
-			</div><!-- /.col-lg-6 -->
-            </div><!--/span-->
-          </div><!--/row-->
+			<div class="row">
+				<div class="span4">
+					<div class="form-group">
+						<h1 id="ChatPerson">Jenna</h1>
+						<textarea class="form-control" rows="20" id="comment">  </textarea>
+					</div>
+				</div><!--/span-->
+				<div class="span4">
+					<div class="col-lg-9" style="float: right">
+						<div class="input-group" >
+							<input type="text" class="form-control" placeholder="Enter message..." id="text">
+							<span class="input-group-btn" ">
+								<button class="btn btn-default" type="button" id="sendTxt">Send</button>
+							</span>
+						</div><!-- /input-group -->
+					</div><!-- /.col-lg-6 -->
+				</div><!--/span-->
+			</div><!--/row-->
         </div><!--/span-->
       
 	  
